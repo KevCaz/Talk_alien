@@ -851,6 +851,126 @@
     <h1 style="font-size:50px !important">Merci !</h1>
 
 
+    ---
+
+    class: slides, transition, middle, center
+
+    <h1 style="font-size:50px !important">Where are we?</h1>
+
+
+    ---
+    class: slides
+
+    # Functions implemented so far
+
+    <br/>
+
+    ## Creating an `alienData` object
+
+    1. `alienData`: to get an `alienData` object
+    2. `as.alienData`: conversion for certain object (data.frame, igraph)
+    3. `summary.alienData`: `summary` method for  `alienData` objects
+
+
+    --
+
+
+    <br/>
+
+    ## Methods
+
+    1. `fitDMC`: direct matching centrality
+    2. `fitMC`: matching centrality
+
+    --
+
+    <br/>
+
+    ## Outputs
+
+    1. `alienPredicts`: Interactions predicts + Tim's paper metric + specific attributes
+    2. `getConnectance`: probabilistic connectance
+
+
+    ---
+
+    # Data formated so far
+
+    <br/>
+
+    1. `plantsPol.rda`: Batormeus data
+    2. `salix.rda`: Kopeleke data
+
+
+    ---
+
+    # Few comments
+
+    <br/>
+
+    1. `alienData`:
+      - `dfNodes`: species OR individuals
+      - `dfEdges`: interactions
+      - `dfSites`: sites
+      - `dfOcc`: occurence
+      - `availableMethods`: given data what the user can do
+
+    --
+    <br/>
+
+    2. Methods:
+      - Starts checking `availableMethods`
+      - Returns an `alienPredict` object
+
+    --
+    <br/>
+
+    3. Predictions:
+      - Probability Networks
+      - tricky: comparing methods (Deviance / R-squared / McFadden)
+
+
+    ---
+
+      # What's next
+
+       <br/>
+
+      ## 1. Implemetings other methods
+
+    --
+
+      ## 2. Completing network metrics
+
+
+    ---
+
+      # Harris 3 species
+
+      <br/>
+
+      |State &nbsp;&nbsp; | Community &nbsp; | Co-occurrence |
+      |:---------|:------------------|:----------------------|
+      | S0    | 0 0 0                | 0 0 0                 |
+      | S1    | 0 0 1                | 0 0 0                 |
+      | S2    | 0 1 0                | 0 0 0                 |
+      | S3    | 0 1 1 &nbsp; **M**   | 0 0 1 &nbsp; **N**    |
+      | S4    | 1 0 0                | 0 0 0                 |
+      | S5    | 1 0 1                | 0 1 0                 |
+      | S6    | 1 1 0                | 1 0 0                 |
+      | S7    | 1 1 1                | 1 1 1                 |
+
+      <br/>
+
+    --
+
+      Communities *k*, species *i* and abiotic variable *x_j*:
+
+    --
+
+    ![:scale 50%](./img/eqnHarris.png)
+
+    <!-- multinomial -->
 
 
     </textarea>
